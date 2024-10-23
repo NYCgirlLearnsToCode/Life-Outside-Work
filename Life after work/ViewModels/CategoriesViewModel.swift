@@ -8,7 +8,7 @@
 import Foundation
 
 class CategoriesViewModel {
-    let categories: [Category] = [
+    var categories: [Category] = [
         Category(type: .physicalFitness),
         Category(type: .mentalHealth),
         Category(type: .personalDevelopment),

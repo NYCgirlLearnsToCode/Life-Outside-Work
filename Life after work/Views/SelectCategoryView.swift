@@ -13,16 +13,20 @@ class SelectCategoryView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupView()
     }
     
-    private func setupView() {
+    func setupView() {
         // Custom setup code, e.g. setting background color
         self.backgroundColor = UIColor(red: 0.6, green: 0.8, blue: 1, alpha: 1.0)
+        
+        //tableview set up
+        selectCategoryTableview.allowsMultipleSelection = true
+        // TODO: Make entire row in tableview selectable
+        selectCategoryTableview.estimatedRowHeight = 44
+        selectCategoryTableview.rowHeight = UITableView.automaticDimension
     }
 }

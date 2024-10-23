@@ -11,17 +11,29 @@ class SelectCategoryViewController: UIViewController {
 
     @IBOutlet var selectCategoryView: SelectCategoryView!
     
-    let categoriesViewModel = CategoriesViewModel()
+    var categoriesViewModel = CategoriesViewModel()
+    var selectedCategories = [Category]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         selectCategoryView.selectCategoryTableview.delegate = self
         selectCategoryView.selectCategoryTableview.dataSource = self
+        selectCategoryView.setupView()
     }
 }
 
 extension SelectCategoryViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) else { return }
+
+        categoriesViewModel.categories[indexPath.row].isSelected = !categoriesViewModel.categories[indexPath.row].isSelected
+
+        if categoriesViewModel.categories[indexPath.row].isSelected {
+            cell.accessoryType = .checkmark
+        } else {
+            cell.accessoryType = .none
+        }
+    }
 }
 
 extension SelectCategoryViewController: UITableViewDataSource {
@@ -35,7 +47,6 @@ extension SelectCategoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
         let category = categoriesViewModel.categories[indexPath.row]
-        print("category\(category.name)")
         cell.categoryLabel.text = category.name
         cell.iconImageView.image = UIImage(systemName: category.icon)
         return cell

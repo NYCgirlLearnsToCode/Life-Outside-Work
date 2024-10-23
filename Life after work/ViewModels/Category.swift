@@ -22,6 +22,7 @@ enum CategoryType: Codable {
 
 struct Category {
     let type: CategoryType
+    var isSelected: Bool = false
     var icon: String {
         switch type {
         case .physicalFitness:
