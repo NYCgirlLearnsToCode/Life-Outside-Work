@@ -10,4 +10,10 @@ import UIKit
 class CategoryCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.accessoryType = .none
+        self.iconImageView = nil
+    }
 }

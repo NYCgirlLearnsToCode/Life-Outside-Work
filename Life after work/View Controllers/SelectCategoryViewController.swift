@@ -26,7 +26,8 @@ extension SelectCategoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
 
-        categoriesViewModel.categories[indexPath.row].isSelected = !categoriesViewModel.categories[indexPath.row].isSelected
+        // Toggle the selection state in the data model
+        categoriesViewModel.categories[indexPath.row].isSelected.toggle()
 
         if categoriesViewModel.categories[indexPath.row].isSelected {
             cell.accessoryType = .checkmark
@@ -49,6 +50,7 @@ extension SelectCategoryViewController: UITableViewDataSource {
         let category = categoriesViewModel.categories[indexPath.row]
         cell.categoryLabel.text = category.name
         cell.iconImageView.image = UIImage(systemName: category.icon)
+
         return cell
     }
 }
