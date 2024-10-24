@@ -15,6 +15,7 @@ class SelectCategoryView: UIView {
         super.init(frame: frame)
     }
     
+    // just a test
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
