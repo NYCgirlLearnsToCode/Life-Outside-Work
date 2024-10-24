@@ -63,9 +63,9 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEf-nG-cW9">
-                                <rect key="frame" x="159" y="589" width="75" height="35"/>
+                                <rect key="frame" x="166" y="589" width="61" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fe6-hZ-UdN"/>
