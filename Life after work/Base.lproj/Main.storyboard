@@ -65,6 +65,9 @@
                                 <rect key="frame" x="166" y="589" width="61" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <connections>
+                                    <action selector="saveSelectedCategories:" destination="zh3-eC-cpi" eventType="touchUpInside" id="MXz-7w-7Wh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fe6-hZ-UdN"/>
@@ -81,6 +84,7 @@
                         </constraints>
                         <connections>
                             <outlet property="questionLabel" destination="zbd-h5-bzP" id="kn0-q3-DId"/>
+                            <outlet property="saveButton" destination="PEf-nG-cW9" id="Pbs-XL-sTs"/>
                             <outlet property="selectCategoryTableview" destination="YlJ-PD-S8b" id="J8n-RB-rea"/>
                         </connections>
                     </view>

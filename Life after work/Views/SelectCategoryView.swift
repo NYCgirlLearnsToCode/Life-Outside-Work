@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol SaveCategoryDelegate: AnyObject {
+    func saveSelectedCategories()
+}
+
 class SelectCategoryView: UIView {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var selectCategoryTableview: UITableView!
-
+    @IBOutlet weak var saveButton: UIButton!
+    
+    weak var delegate: SaveCategoryDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -26,5 +33,8 @@ class SelectCategoryView: UIView {
         //tableview set up
         selectCategoryTableview.estimatedRowHeight = 44
         selectCategoryTableview.rowHeight = UITableView.automaticDimension
+    }
+    @IBAction func saveSelectedCategories(_ sender: UIButton) {
+        self.delegate?.saveSelectedCategories()
     }
 }

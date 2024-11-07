@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectCategoryViewController: UIViewController {
+class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
 
     @IBOutlet var selectCategoryView: SelectCategoryView!
     
@@ -17,8 +17,22 @@ class SelectCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectCategoryView.selectCategoryTableview.delegate = self
+        selectCategoryView.delegate = self
         selectCategoryView.selectCategoryTableview.dataSource = self
         selectCategoryView.setupView()
+    }
+    
+    func saveSelectedCategories() {
+        for row in 0..<selectCategoryView.selectCategoryTableview.numberOfRows(inSection: 0) {
+            let indexPath = IndexPath(row: row, section: 0)
+            
+            if let cell = selectCategoryView.selectCategoryTableview.cellForRow(at: indexPath) {
+                if cell.accessoryType == .checkmark {
+                    print("indexPath:\(indexPath.row)")
+                    // TODO: save categories by writing to phone
+                }
+            }
+        }
     }
 }
 
