@@ -24,6 +24,13 @@ struct PersistenceHelper<T: Codable> {
         return try PropertyListDecoder().decode([T].self, from: data)
     }
     
+    func save(newElements: [T]) throws {
+        var elements = try getObjects()
+        elements = newElements
+        let serializedData = try PropertyListEncoder().encode(elements)
+        try serializedData.write(to: url, options: Data.WritingOptions.atomic)
+    }
+    
     private func filePathFromDocumentsDirectory(filename: String) -> URL {
         return documentsDirectory().appendingPathComponent(fileName)
     }
@@ -39,8 +46,19 @@ struct CategoryPersistenceHelper {
     private let persistenceHelper = PersistenceHelper<Category>(fileName: "lifeOutsideWorkSelectedCategories.plist")
     
     func save(categories: [Category]) {
-        // TODO: figuring out whether to save the list of categories or something else
-        
-        //save button can save everything? or save speciifc fields..
+        do {
+            try persistenceHelper.save(newElements: categories)
+        } catch {
+            print("cannot save new categories with error: \(error)")
+        }
+    }
+    
+    func getItems() -> [Category]? {
+        do {
+            return try persistenceHelper.getObjects()
+        } catch {
+            print("cannot get categories")
+            return nil
+        }
     }
 }

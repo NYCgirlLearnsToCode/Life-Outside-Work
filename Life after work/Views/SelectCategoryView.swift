@@ -33,6 +33,7 @@ class SelectCategoryView: UIView {
         //tableview set up
         selectCategoryTableview.estimatedRowHeight = 44
         selectCategoryTableview.rowHeight = UITableView.automaticDimension
+        selectCategoryTableview.layer.cornerRadius = 10
     }
     @IBAction func saveSelectedCategories(_ sender: UIButton) {
         self.delegate?.saveSelectedCategories()

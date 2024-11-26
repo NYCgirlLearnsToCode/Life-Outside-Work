@@ -13,6 +13,7 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
     
     var categoriesViewModel = CategoriesViewModel()
     var selectedCategories = [Category]()
+    private var persistenceHelper = CategoryPersistenceHelper.manager
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +29,20 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
             
             if let cell = selectCategoryView.selectCategoryTableview.cellForRow(at: indexPath) {
                 if cell.accessoryType == .checkmark {
-                    print("indexPath:\(indexPath.row)")
-                    // TODO: save categories by writing to phone
-                    // access to index map index to categoriesviewmodel.categories
-                    //saving a list of categories
+                    let category = categoriesViewModel.categories[indexPath.row]
+                    selectedCategories.append(category)
                 }
             }
         }
+        
+        if selectedCategories.isEmpty {
+            // TODO: Add a prompt stating no categories have been selected to save
+            print("nothing to save")
+            return
+        }
+        
+        persistenceHelper.save(categories: selectedCategories)
+        // TODO: decide whether to dismiss page and navigate to vc with selected categories or refresh the tableview with the selected categories
     }
 }
 
@@ -57,6 +65,7 @@ extension SelectCategoryViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoriesViewModel.categories.count
     }
