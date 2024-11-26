@@ -30,6 +30,8 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
                 if cell.accessoryType == .checkmark {
                     print("indexPath:\(indexPath.row)")
                     // TODO: save categories by writing to phone
+                    // access to index map index to categoriesviewmodel.categories
+                    //saving a list of categories
                 }
             }
         }

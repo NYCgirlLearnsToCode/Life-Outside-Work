@@ -16,6 +16,7 @@
 		D241099A2CAF376300A044CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D24109992CAF376300A044CA /* Assets.xcassets */; };
 		D241099D2CAF376300A044CA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D241099C2CAF376300A044CA /* Base */; };
 		D24109A52CAF3D2700A044CA /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24109A42CAF3D2700A044CA /* SelectCategoryView.swift */; };
+		D2BA9BC82CDD61B100C8ACD9 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA9BC72CDD61B100C8ACD9 /* PersistenceHelper.swift */; };
 		D2D2B9232CB03AD8007F04D9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2B9222CB03AD8007F04D9 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		D241099C2CAF376300A044CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D241099E2CAF376300A044CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D24109A42CAF3D2700A044CA /* SelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
+		D2BA9BC72CDD61B100C8ACD9 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		D2D2B9222CB03AD8007F04D9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 			children = (
 				D24109902CAF376000A044CA /* AppDelegate.swift */,
 				D24109922CAF376000A044CA /* SceneDelegate.swift */,
+				D2BA9BC92CDD61B700C8ACD9 /* Models */,
 				D24109A72CAF3D3E00A044CA /* View Controllers */,
 				D205F4AC2CC81B4A00A38824 /* ViewModels */,
 				D24109A62CAF3D3500A044CA /* Views */,
@@ -101,6 +104,14 @@
 				D24109942CAF376000A044CA /* SelectCategoryViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D2BA9BC92CDD61B700C8ACD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2BA9BC72CDD61B100C8ACD9 /* PersistenceHelper.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				D205F4AB2CC81B4100A38824 /* CategoriesViewModel.swift in Sources */,
 				D2D2B9232CB03AD8007F04D9 /* CategoryCell.swift in Sources */,
 				D205F4AE2CC81CB900A38824 /* Category.swift in Sources */,
+				D2BA9BC82CDD61B100C8ACD9 /* PersistenceHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

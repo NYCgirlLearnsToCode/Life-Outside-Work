@@ -20,7 +20,7 @@ enum CategoryType: Codable {
     case reflection
 }
 
-struct Category {
+struct Category: Codable {
     let type: CategoryType
     var isSelected: Bool = false
     var icon: String {
