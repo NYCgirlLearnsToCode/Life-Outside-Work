@@ -13,7 +13,6 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
     
     var categoriesViewModel = CategoriesViewModel()
     var selectedCategories = [Category]()
-    private var persistenceHelper = CategoryPersistenceHelper.manager
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,13 +35,27 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
         }
         
         if selectedCategories.isEmpty {
-            // TODO: Add a prompt stating no categories have been selected to save
-            print("nothing to save")
+            let alert = UIAlertController(title: "No categories selected", message: "Please select some categories :)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default))
+            self.present(alert, animated: true, completion: nil)
             return
         }
         
-        persistenceHelper.save(categories: selectedCategories)
-        // TODO: decide whether to dismiss page and navigate to vc with selected categories or refresh the tableview with the selected categories
+        CategoryPersistenceHelper.manager.save(categories: selectedCategories, completion: {_ in
+            // TODO: navigate to vc with selected categories or refresh the tableview with the selected categories
+            // once successfully saved, navigate to viewcontroller displaying the list of selected categories
+            // dismiss select category vc
+            print("about to push")
+            let selectedCategoriesVC = SelectedCategoriesViewController()
+            if let navController = self.navigationController {
+                navController.pushViewController(selectedCategoriesVC, animated: true)
+                print("done pushing")
+            } else {
+                print("this vc is not embedded in a nav controller")
+            }
+        }, onFailure: {
+            print("couldn't save")
+        })
     }
 }
 

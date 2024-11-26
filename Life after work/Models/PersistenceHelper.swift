@@ -45,10 +45,12 @@ struct CategoryPersistenceHelper {
     
     private let persistenceHelper = PersistenceHelper<Category>(fileName: "lifeOutsideWorkSelectedCategories.plist")
     
-    func save(categories: [Category]) {
+    func save(categories: [Category], completion: ([Category]) -> Void, onFailure: () -> Void) {
         do {
             try persistenceHelper.save(newElements: categories)
+            completion(categories)
         } catch {
+            onFailure()
             print("cannot save new categories with error: \(error)")
         }
     }

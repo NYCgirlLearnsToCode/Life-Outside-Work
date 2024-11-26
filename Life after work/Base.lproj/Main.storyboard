@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0e6-fG-Isb">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -11,36 +11,36 @@
         <!--Select Category View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SelectCategoryViewController" customModule="Life_after_work" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectCategoryViewController" id="BYZ-38-t0r" customClass="SelectCategoryViewController" customModule="Life_after_work" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zh3-eC-cpi" customClass="SelectCategoryView" customModule="Life_after_work" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What would you like to focus on this week?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-h5-bzP">
-                                <rect key="frame" x="33.666666666666657" y="75" width="326" height="21"/>
+                                <rect key="frame" x="33.666666666666657" y="119" width="326" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-PD-S8b">
-                                <rect key="frame" x="16" y="112" width="361" height="430"/>
+                                <rect key="frame" x="16" y="156" width="361" height="386"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryCell" id="4S3-PK-oAk" customClass="CategoryCell" customModule="Life_after_work" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="37.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="50" width="361" height="37.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4S3-PK-oAk" id="uHh-8B-iUN">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="37.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="37.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="categoryLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-bR-RSf">
-                                                    <rect key="frame" x="32" y="8.0000000000000018" width="321" height="21.666666666666671"/>
+                                                    <rect key="frame" x="32" y="7.9999999999999982" width="321" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-Ot-CJv">
-                                                    <rect key="frame" x="8" y="11" width="16" height="16"/>
+                                                    <rect key="frame" x="8" y="10.666666666666664" width="16" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="16" id="MLQ-ut-InC"/>
                                                         <constraint firstAttribute="height" constant="16" id="X3F-gf-Gyi"/>
@@ -90,11 +90,30 @@
                             <outlet property="selectCategoryTableview" destination="YlJ-PD-S8b" id="J8n-RB-rea"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="0H7-Ok-8z3"/>
                     <connections>
                         <outlet property="selectCategoryView" destination="zh3-eC-cpi" id="mEK-xe-vlV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017.5572519083969" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4lK-Dk-IAe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0e6-fG-Isb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gZS-2K-bbQ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iYm-fn-38k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgm-s5-iP8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="90.839694656488547" y="3.5211267605633805"/>
         </scene>

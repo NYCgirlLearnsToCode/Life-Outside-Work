@@ -18,6 +18,8 @@
 		D24109A52CAF3D2700A044CA /* SelectCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24109A42CAF3D2700A044CA /* SelectCategoryView.swift */; };
 		D2BA9BC82CDD61B100C8ACD9 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BA9BC72CDD61B100C8ACD9 /* PersistenceHelper.swift */; };
 		D2D2B9232CB03AD8007F04D9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2B9222CB03AD8007F04D9 /* CategoryCell.swift */; };
+		D2E762EC2CF6625F0012924C /* SelectedCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E762EB2CF6625F0012924C /* SelectedCategoriesViewController.swift */; };
+		D2E762EE2CF664060012924C /* SelectedCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E762ED2CF664060012924C /* SelectedCategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		D24109A42CAF3D2700A044CA /* SelectCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCategoryView.swift; sourceTree = "<group>"; };
 		D2BA9BC72CDD61B100C8ACD9 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		D2D2B9222CB03AD8007F04D9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		D2E762EB2CF6625F0012924C /* SelectedCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoriesViewController.swift; sourceTree = "<group>"; };
+		D2E762ED2CF664060012924C /* SelectedCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 			children = (
 				D24109A42CAF3D2700A044CA /* SelectCategoryView.swift */,
 				D2D2B9222CB03AD8007F04D9 /* CategoryCell.swift */,
+				D2E762ED2CF664060012924C /* SelectedCategoriesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D24109942CAF376000A044CA /* SelectCategoryViewController.swift */,
+				D2E762EB2CF6625F0012924C /* SelectedCategoriesViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -188,7 +194,9 @@
 				D24109A52CAF3D2700A044CA /* SelectCategoryView.swift in Sources */,
 				D24109952CAF376000A044CA /* SelectCategoryViewController.swift in Sources */,
 				D24109912CAF376000A044CA /* AppDelegate.swift in Sources */,
+				D2E762EE2CF664060012924C /* SelectedCategoriesView.swift in Sources */,
 				D24109932CAF376000A044CA /* SceneDelegate.swift in Sources */,
+				D2E762EC2CF6625F0012924C /* SelectedCategoriesViewController.swift in Sources */,
 				D205F4AB2CC81B4100A38824 /* CategoriesViewModel.swift in Sources */,
 				D2D2B9232CB03AD8007F04D9 /* CategoryCell.swift in Sources */,
 				D205F4AE2CC81CB900A38824 /* Category.swift in Sources */,
