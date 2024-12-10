@@ -48,7 +48,6 @@ extension SelectedCategoriesViewController: UITableViewDataSource {
         //debug here incorrect categories shown
         cell.categoryLabel.text = category.name
         cell.iconImageView.image = UIImage(systemName: category.icon)
-        // TODO: Bug category label is nil when saving selected categories
 
         return cell
     }
