@@ -10,7 +10,6 @@ import UIKit
 class SelectedCategoriesViewController: UIViewController {
     
     let selectedCategoriesView = SelectedCategoriesView()
-    var categoriesViewModel = CategoriesViewModel()
     var selectedCategories = [Category]()
 
     override func viewDidLoad() {
@@ -46,7 +45,8 @@ extension SelectedCategoriesViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
         let category = selectedCategories[indexPath.row]
         // TODO: Selected category enums are saved but the string counterparts are not, revisit this as currently the indexpath is used to reference the category
-        cell.categoryLabel.text = categoriesViewModel.categories[indexPath.row].name
+        //debug here incorrect categories shown
+        cell.categoryLabel.text = category.name
         cell.iconImageView.image = UIImage(systemName: category.icon)
         // TODO: Bug category label is nil when saving selected categories
 

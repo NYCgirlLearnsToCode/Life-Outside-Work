@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Enable constraint debugging logs, remove or comment out before releasing app to prod as it can clutter logs
+        UserDefaults.standard.set(true, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         window = UIWindow(frame: UIScreen.main.bounds)
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

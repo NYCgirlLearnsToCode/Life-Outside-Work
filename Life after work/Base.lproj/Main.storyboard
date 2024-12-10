@@ -25,43 +25,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YlJ-PD-S8b">
                                 <rect key="frame" x="16" y="156" width="361" height="386"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryCell" id="4S3-PK-oAk" customClass="CategoryCell" customModule="Life_after_work" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="37.333332061767578"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4S3-PK-oAk" id="uHh-8B-iUN">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="37.333332061767578"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="categoryLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZN-bR-RSf">
-                                                    <rect key="frame" x="32" y="7.9999999999999982" width="321" height="21.333333333333329"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ck3-Ot-CJv">
-                                                    <rect key="frame" x="8" y="10.666666666666664" width="16" height="16"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="16" id="MLQ-ut-InC"/>
-                                                        <constraint firstAttribute="height" constant="16" id="X3F-gf-Gyi"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="oZN-bR-RSf" secondAttribute="trailing" constant="8" id="BAV-VK-E3g"/>
-                                                <constraint firstItem="oZN-bR-RSf" firstAttribute="top" secondItem="uHh-8B-iUN" secondAttribute="top" constant="8" id="HIn-oY-1HR"/>
-                                                <constraint firstItem="Ck3-Ot-CJv" firstAttribute="leading" secondItem="uHh-8B-iUN" secondAttribute="leading" constant="8" id="I9t-qB-TwH"/>
-                                                <constraint firstItem="Ck3-Ot-CJv" firstAttribute="centerY" secondItem="oZN-bR-RSf" secondAttribute="centerY" id="KVW-Iv-cvG"/>
-                                                <constraint firstItem="Ck3-Ot-CJv" firstAttribute="trailing" secondItem="oZN-bR-RSf" secondAttribute="leading" constant="-8" id="OIn-a0-oAD"/>
-                                                <constraint firstAttribute="bottom" secondItem="oZN-bR-RSf" secondAttribute="bottom" constant="8" id="ZRC-Ja-2Gc"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="categoryLabel" destination="oZN-bR-RSf" id="zRm-q0-TxK"/>
-                                            <outlet property="iconImageView" destination="Ck3-Ot-CJv" id="rki-no-QjY"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEf-nG-cW9">
                                 <rect key="frame" x="166" y="589" width="61" height="35"/>

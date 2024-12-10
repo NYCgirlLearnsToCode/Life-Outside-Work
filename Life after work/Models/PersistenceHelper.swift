@@ -63,4 +63,6 @@ struct CategoryPersistenceHelper {
             return nil
         }
     }
+    
+    // TODO: implement deleteItems
 }

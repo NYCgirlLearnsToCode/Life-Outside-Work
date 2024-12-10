@@ -22,6 +22,7 @@ class SelectedCategoriesView: UIView {
     }()
     
     private func setupViews() {
+        self.backgroundColor = UIColor(red: 0.6, green: 0.8, blue: 1, alpha: 1.0)
         setupTitleLabel()
         setupTableView()
     }

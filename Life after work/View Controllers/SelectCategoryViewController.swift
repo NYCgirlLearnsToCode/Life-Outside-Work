@@ -17,6 +17,7 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectCategoryView.selectCategoryTableview.delegate = self
+        selectCategoryView.selectCategoryTableview.register(CategoryCell.self, forCellReuseIdentifier: "CategoryCell")
         selectCategoryView.delegate = self
         selectCategoryView.selectCategoryTableview.dataSource = self
         selectCategoryView.setupView()
@@ -45,7 +46,6 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
             // TODO: navigate to vc with selected categories or refresh the tableview with the selected categories
             // once successfully saved, navigate to viewcontroller displaying the list of selected categories
             // dismiss select category vc
-            print("about to push")
             let selectedCategoriesVC = SelectedCategoriesViewController()
             if let navController = self.navigationController {
                 navController.pushViewController(selectedCategoriesVC, animated: true)

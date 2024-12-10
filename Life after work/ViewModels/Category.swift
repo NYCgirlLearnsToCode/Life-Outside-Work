@@ -54,7 +54,7 @@ struct Category: Codable {
         case .mentalHealth:
             return "Mental Well-being"
         case .personalDevelopment:
-            return "Personal Development"
+            return "Personal Developmentqwertyuiopoifdsfghjkl;[p098uyhjkl;p98uytfgvbnjkl;p9876ytrfdvbnmkloi8uy"
         case .social:
             return "Social Connections"
         case .creative:
