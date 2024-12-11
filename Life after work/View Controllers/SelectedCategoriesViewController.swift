@@ -15,14 +15,17 @@ class SelectedCategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedCategories = CategoryPersistenceHelper.manager.getItems() ?? [Category]()
+
+        self.selectedCategoriesView.tableView.dataSource = self
+        self.selectedCategoriesView.tableView.delegate = self
+
         setupSelectedCategoriesView()
     }
 
     private func setupSelectedCategoriesView() {
         self.view.addSubview(selectedCategoriesView)
         
-        self.selectedCategoriesView.tableView.dataSource = self
-        self.selectedCategoriesView.tableView.delegate = self
+        
     }
     /*
     // MARK: - Navigation

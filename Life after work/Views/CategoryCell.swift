@@ -62,9 +62,8 @@ class CategoryCell: UITableViewCell {
         NSLayoutConstraint.activate([
             categoryLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: padding),
             categoryLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            categoryLabel.centerYAnchor.constraint(equalTo: iconImageView.centerYAnchor),
-            categoryLabel.topAnchor.constraint(greaterThanOrEqualTo: contentView.topAnchor, constant: padding),
-                        categoryLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -padding)
+            categoryLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            categoryLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding)
         ])
     }
 }
