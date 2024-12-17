@@ -24,6 +24,14 @@ struct PersistenceHelper<T: Codable> {
         return try PropertyListDecoder().decode([T].self, from: data)
     }
     
+    func deleteItems() throws {
+        var elements = try getObjects()
+        elements = [T]()
+        
+        let serializedData = try PropertyListEncoder().encode(elements)
+        try serializedData.write(to: url, options: Data.WritingOptions.atomic)
+    }
+    
     func save(newElements: [T]) throws {
         var elements = try getObjects()
         elements = newElements
@@ -64,5 +72,11 @@ struct CategoryPersistenceHelper {
         }
     }
     
-    // TODO: implement deleteItems
+    func deleteItems() {
+        do {
+            try persistenceHelper.deleteItems()
+        } catch {
+            print("could not delete")
+        }
+    }
 }

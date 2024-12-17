@@ -16,6 +16,8 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // TODO: - temporary for testing, remove
+        CategoryPersistenceHelper.manager.deleteItems()
         selectCategoryView.selectCategoryTableview.delegate = self
         selectCategoryView.selectCategoryTableview.register(CategoryCell.self, forCellReuseIdentifier: "CategoryCell")
         selectCategoryView.delegate = self

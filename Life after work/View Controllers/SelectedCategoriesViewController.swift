@@ -15,17 +15,28 @@ class SelectedCategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedCategories = CategoryPersistenceHelper.manager.getItems() ?? [Category]()
+        // the expected categories are here
+        print(selectedCategories)
 
         self.selectedCategoriesView.tableView.dataSource = self
         self.selectedCategoriesView.tableView.delegate = self
-
+        
+        self.view.backgroundColor = UIColor.green
         setupSelectedCategoriesView()
     }
 
     private func setupSelectedCategoriesView() {
         self.view.addSubview(selectedCategoriesView)
+        selectedCategoriesView.translatesAutoresizingMaskIntoConstraints = false
+       
+        NSLayoutConstraint.activate([
+            selectedCategoriesView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            selectedCategoriesView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor),
+            selectedCategoriesView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            selectedCategoriesView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+        ])
         
-        
+        // need to constrain tableview - not self sizing, cells are self sizing
     }
     /*
     // MARK: - Navigation
@@ -40,8 +51,13 @@ class SelectedCategoriesViewController: UIViewController {
 }
 
 extension SelectedCategoriesViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(selectedCategories.count)
+        return selectedCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
