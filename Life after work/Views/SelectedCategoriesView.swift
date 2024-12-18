@@ -15,8 +15,8 @@ class SelectedCategoriesView: UIView {
         return label
     }()
     
-    lazy var tableView: UITableView = {
-        let tableView = UITableView()
+    lazy var tableView: CategoryTableView = {
+        let tableView = CategoryTableView()
         tableView.register(CategoryCell.self, forCellReuseIdentifier: "CategoryCell")
         return tableView
     }()
@@ -58,6 +58,6 @@ class SelectedCategoriesView: UIView {
         tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16.0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
         tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8.0).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 8.0).isActive = true
+//        tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 8.0).isActive = true
     }
 }

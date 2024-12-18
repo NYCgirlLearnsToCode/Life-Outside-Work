@@ -13,7 +13,7 @@ protocol SaveCategoryDelegate: AnyObject {
 
 class SelectCategoryView: UIView {
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var selectCategoryTableview: UITableView!
+    @IBOutlet weak var selectCategoryTableview: CategoryTableView!
     @IBOutlet weak var saveButton: UIButton!
     
     weak var delegate: SaveCategoryDelegate?
@@ -40,3 +40,4 @@ class SelectCategoryView: UIView {
         self.delegate?.saveSelectedCategories()
     }
 }
+
