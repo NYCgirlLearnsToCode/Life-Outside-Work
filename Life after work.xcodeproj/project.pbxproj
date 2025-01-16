@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D203D3462D370F3A0091A6D2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203D3452D370F3A0091A6D2 /* DateUtils.swift */; };
+		D203D3482D39812B0091A6D2 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203D3472D39812B0091A6D2 /* SaveData.swift */; };
 		D205F4AB2CC81B4100A38824 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D205F4AA2CC81B4100A38824 /* CategoriesViewModel.swift */; };
 		D205F4AE2CC81CB900A38824 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D205F4AD2CC81CB900A38824 /* Category.swift */; };
 		D24109912CAF376000A044CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24109902CAF376000A044CA /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D203D3452D370F3A0091A6D2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		D203D3472D39812B0091A6D2 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		D205F4AA2CC81B4100A38824 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		D205F4AD2CC81CB900A38824 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D241098D2CAF376000A044CA /* Life after work.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Life after work.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				D205F4AA2CC81B4100A38824 /* CategoriesViewModel.swift */,
-				D205F4AD2CC81CB900A38824 /* Category.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -118,7 +121,10 @@
 		D2BA9BC92CDD61B700C8ACD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D205F4AD2CC81CB900A38824 /* Category.swift */,
 				D2BA9BC72CDD61B100C8ACD9 /* PersistenceHelper.swift */,
+				D203D3452D370F3A0091A6D2 /* DateUtils.swift */,
+				D203D3472D39812B0091A6D2 /* SaveData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D24109A52CAF3D2700A044CA /* SelectCategoryView.swift in Sources */,
+				D203D3462D370F3A0091A6D2 /* DateUtils.swift in Sources */,
+				D203D3482D39812B0091A6D2 /* SaveData.swift in Sources */,
 				D24109952CAF376000A044CA /* SelectCategoryViewController.swift in Sources */,
 				D24109912CAF376000A044CA /* AppDelegate.swift in Sources */,
 				D2E762EE2CF664060012924C /* SelectedCategoriesView.swift in Sources */,

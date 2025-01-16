@@ -18,7 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Enable constraint debugging logs, remove or comment out before releasing app to prod as it can clutter logs
         UserDefaults.standard.set(true, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         window = UIWindow(frame: UIScreen.main.bounds)
-
+        // TODO: Check if it's a new week
+//        let dateUtils = DateUtils(lastSavedDate: <#T##Date#>)
+        // new week - display select category
+        // else show selected
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let initialVC = storyboard.instantiateInitialViewController()
         
