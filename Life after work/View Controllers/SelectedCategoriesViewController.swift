@@ -14,7 +14,8 @@ class SelectedCategoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectedCategories = CategoryPersistenceHelper.manager.getItems() ?? [Category]()
+        selectedCategories = CategoryPersistenceHelper.manager.loadData()?.elements ?? [Category]()
+        
         // the expected categories are here
         print(selectedCategories)
 

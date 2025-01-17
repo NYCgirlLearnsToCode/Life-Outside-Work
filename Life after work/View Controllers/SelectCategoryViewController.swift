@@ -18,6 +18,7 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
         super.viewDidLoad()
         // TODO: - temporary for testing, remove
         CategoryPersistenceHelper.manager.deleteItems()
+        print("loading data \(CategoryPersistenceHelper.manager.loadData())")
         selectCategoryView.selectCategoryTableview.delegate = self
         selectCategoryView.selectCategoryTableview.register(CategoryCell.self, forCellReuseIdentifier: "CategoryCell")
         selectCategoryView.delegate = self
@@ -44,7 +45,9 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
             return
         }
         
-        CategoryPersistenceHelper.manager.save(categories: selectedCategories, completion: {_ in
+        
+        let saveData = SaveData(elements: selectedCategories, lastSavedDate: Date.now)
+        CategoryPersistenceHelper.manager.saveJson(saveData:saveData, completion: {
             // TODO: navigate to vc with selected categories or refresh the tableview with the selected categories
             // once successfully saved, navigate to viewcontroller displaying the list of selected categories
             // dismiss select category vc

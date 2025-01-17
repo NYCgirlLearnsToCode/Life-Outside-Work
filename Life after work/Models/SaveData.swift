@@ -9,5 +9,5 @@ import Foundation
 
 struct SaveData: Codable {
     var elements: [Category]
-    var lastSavedDate: Date
+    var lastSavedDate: Date?
 }
