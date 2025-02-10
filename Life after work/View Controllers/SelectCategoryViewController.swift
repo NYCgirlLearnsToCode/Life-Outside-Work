@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
 
@@ -13,6 +14,7 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
     
     var categoriesViewModel = CategoriesViewModel()
     var selectedCategories = [Category]()
+    var player: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,7 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
             let selectedCategoriesVC = SelectedCategoriesViewController()
             if let navController = self.navigationController {
                 navController.pushViewController(selectedCategoriesVC, animated: true)
+                playSound(name: "twinkle")
                 print("done pushing")
             } else {
                 print("this vc is not embedded in a nav controller")
@@ -61,6 +64,18 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
         }, onFailure: {
             print("couldn't save")
         })
+    }
+    
+    func playSound(name: String) {
+        guard let path = Bundle.main.path(forResource: name, ofType: "mp3") else { return }
+        
+        let url = URL(fileURLWithPath: path)
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
 
@@ -73,6 +88,8 @@ extension SelectCategoryViewController: UITableViewDelegate {
 
         if categoriesViewModel.categories[indexPath.row].isSelected {
             cell.accessoryType = .checkmark
+            // add audio
+            playSound(name: "sparkle")
         } else {
             cell.accessoryType = .none
         }

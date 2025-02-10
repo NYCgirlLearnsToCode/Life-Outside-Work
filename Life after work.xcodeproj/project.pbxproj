@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D202DF482D5A6AFA00D5F1CB /* sparkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D202DF472D5A6AFA00D5F1CB /* sparkle.mp3 */; };
+		D202DF4A2D5A6BFF00D5F1CB /* twinkle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D202DF492D5A6BFF00D5F1CB /* twinkle.mp3 */; };
 		D203D3462D370F3A0091A6D2 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203D3452D370F3A0091A6D2 /* DateUtils.swift */; };
 		D203D3482D39812B0091A6D2 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D203D3472D39812B0091A6D2 /* SaveData.swift */; };
 		D205F4AB2CC81B4100A38824 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D205F4AA2CC81B4100A38824 /* CategoriesViewModel.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D202DF472D5A6AFA00D5F1CB /* sparkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sparkle.mp3; sourceTree = "<group>"; };
+		D202DF492D5A6BFF00D5F1CB /* twinkle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = twinkle.mp3; sourceTree = "<group>"; };
 		D203D3452D370F3A0091A6D2 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		D203D3472D39812B0091A6D2 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		D205F4AA2CC81B4100A38824 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				D205F4AC2CC81B4A00A38824 /* ViewModels */,
 				D24109A62CAF3D3500A044CA /* Views */,
 				D24109962CAF376000A044CA /* Main.storyboard */,
+				D202DF472D5A6AFA00D5F1CB /* sparkle.mp3 */,
+				D202DF492D5A6BFF00D5F1CB /* twinkle.mp3 */,
 				D24109992CAF376300A044CA /* Assets.xcassets */,
 				D241099B2CAF376300A044CA /* LaunchScreen.storyboard */,
 				D241099E2CAF376300A044CA /* Info.plist */,
@@ -190,6 +196,8 @@
 				D241099A2CAF376300A044CA /* Assets.xcassets in Resources */,
 				D241099D2CAF376300A044CA /* Base in Resources */,
 				D24109982CAF376000A044CA /* Base in Resources */,
+				D202DF4A2D5A6BFF00D5F1CB /* twinkle.mp3 in Resources */,
+				D202DF482D5A6AFA00D5F1CB /* sparkle.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
