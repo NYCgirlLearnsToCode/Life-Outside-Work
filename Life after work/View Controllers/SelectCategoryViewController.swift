@@ -53,10 +53,14 @@ class SelectCategoryViewController: UIViewController, SaveCategoryDelegate {
             // TODO: navigate to vc with selected categories or refresh the tableview with the selected categories
             // once successfully saved, navigate to viewcontroller displaying the list of selected categories
             // dismiss select category vc
+            playSound(name: "twinkle")
             let selectedCategoriesVC = SelectedCategoriesViewController()
             if let navController = self.navigationController {
-                navController.pushViewController(selectedCategoriesVC, animated: true)
-                playSound(name: "twinkle")
+                
+                var viewControllers = navController.viewControllers
+                viewControllers.removeLast()
+                viewControllers.append(selectedCategoriesVC)
+                navigationController?.setViewControllers(viewControllers, animated: true)
                 print("done pushing")
             } else {
                 print("this vc is not embedded in a nav controller")

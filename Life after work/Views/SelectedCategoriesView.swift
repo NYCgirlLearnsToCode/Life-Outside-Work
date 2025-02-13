@@ -21,10 +21,18 @@ class SelectedCategoriesView: UIView {
         return tableView
     }()
     
+    lazy var editButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Edit", for: .normal)
+        button.backgroundColor = UIColor.orange
+        return button
+    }()
+    
     private func setupViews() {
         self.backgroundColor = UIColor(red: 0.6, green: 0.8, blue: 1, alpha: 1.0)
         setupTitleLabel()
         setupTableView()
+        setupEditButton()
     }
     
     override init(frame: CGRect) {
@@ -58,6 +66,21 @@ class SelectedCategoriesView: UIView {
         tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16.0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16.0).isActive = true
         tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8.0).isActive = true
-//        tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 8.0).isActive = true
+    }
+    
+    private func setupEditButton() {
+        addSubview(editButton)
+        editButton.translatesAutoresizingMaskIntoConstraints = false
+        editButton.layer.cornerRadius = 10
+
+        editButton.addTarget(self, action: #selector(didTapEdit), for: .touchUpInside)
+        editButton.leadingAnchor.constraint(equalTo: tableView.leadingAnchor).isActive = true
+        editButton.trailingAnchor.constraint(equalTo: tableView.trailingAnchor).isActive = true
+        editButton.topAnchor.constraint(equalTo: tableView.bottomAnchor, constant: 16.0).isActive = true
+    }
+    
+    @objc func didTapEdit() {
+        let selectCategoryViewController = SelectCategoryViewController()
+        // TODO: expected to have full list of categories with checkmarks next to categories that have been selected
     }
 }
