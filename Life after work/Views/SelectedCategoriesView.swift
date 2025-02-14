@@ -81,6 +81,6 @@ class SelectedCategoriesView: UIView {
     
     @objc func didTapEdit() {
         let selectCategoryViewController = SelectCategoryViewController()
-        // TODO: expected to have full list of categories with checkmarks next to categories that have been selected
+        // TODO: 2 edit button expected to have full list of categories with checkmarks next to categories that have been selected
     }
 }
