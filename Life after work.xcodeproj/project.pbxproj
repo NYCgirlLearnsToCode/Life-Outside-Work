@@ -25,6 +25,8 @@
 		D2D2B9232CB03AD8007F04D9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D2B9222CB03AD8007F04D9 /* CategoryCell.swift */; };
 		D2E762EC2CF6625F0012924C /* SelectedCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E762EB2CF6625F0012924C /* SelectedCategoriesViewController.swift */; };
 		D2E762EE2CF664060012924C /* SelectedCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E762ED2CF664060012924C /* SelectedCategoriesView.swift */; };
+		D2F96A392DC2B392009B8D05 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F96A382DC2B392009B8D05 /* RegistrationViewController.swift */; };
+		D2F96A3B2DC2B3B9009B8D05 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F96A3A2DC2B3B9009B8D05 /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		D2D2B9222CB03AD8007F04D9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		D2E762EB2CF6625F0012924C /* SelectedCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoriesViewController.swift; sourceTree = "<group>"; };
 		D2E762ED2CF664060012924C /* SelectedCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCategoriesView.swift; sourceTree = "<group>"; };
+		D2F96A382DC2B392009B8D05 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D2F96A3A2DC2B3B9009B8D05 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 			children = (
 				D24109942CAF376000A044CA /* SelectCategoryViewController.swift */,
 				D2E762EB2CF6625F0012924C /* SelectedCategoriesViewController.swift */,
+				D2F96A382DC2B392009B8D05 /* RegistrationViewController.swift */,
+				D2F96A3A2DC2B3B9009B8D05 /* RegistrationView.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -212,10 +218,12 @@
 				D203D3462D370F3A0091A6D2 /* DateUtils.swift in Sources */,
 				D203D3482D39812B0091A6D2 /* SaveData.swift in Sources */,
 				D24109952CAF376000A044CA /* SelectCategoryViewController.swift in Sources */,
+				D2F96A392DC2B392009B8D05 /* RegistrationViewController.swift in Sources */,
 				D24109912CAF376000A044CA /* AppDelegate.swift in Sources */,
 				D2E762EE2CF664060012924C /* SelectedCategoriesView.swift in Sources */,
 				D24109932CAF376000A044CA /* SceneDelegate.swift in Sources */,
 				D2E762EC2CF6625F0012924C /* SelectedCategoriesViewController.swift in Sources */,
+				D2F96A3B2DC2B3B9009B8D05 /* RegistrationView.swift in Sources */,
 				D2A3C6C42D13379400BB1BFB /* CategoryTableView.swift in Sources */,
 				D205F4AB2CC81B4100A38824 /* CategoriesViewModel.swift in Sources */,
 				D2D2B9232CB03AD8007F04D9 /* CategoryCell.swift in Sources */,
